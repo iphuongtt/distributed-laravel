@@ -1,8 +1,8 @@
 {
-    "name": "optimus/distributed-laravel",
+    "name": "iphuongtt/distributed-laravel",
     "autoload": {
         "psr-4": {
-            "Optimus\\Api\\System\\": "src/"
+            "Iphuongtt\\Api\\System\\": "src/"
         }
     },
     "require": {
@@ -11,8 +11,7 @@
     "require-dev": {
         "mockery/mockery": "0.9.*",
         "orchestra/testbench": "~3.1",
-        "phpunit/phpunit": "~4.7",
-        "satooshi/php-coveralls": "dev-master@dev"
+        "phpunit/phpunit": "~4.7"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,

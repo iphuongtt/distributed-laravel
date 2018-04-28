@@ -1,6 +1,6 @@
 <?php
 
-namespace Optimus\Api\System;
+namespace Iphuongtt\Api\System;
 
 use Illuminate\Routing\Router;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
@@ -34,7 +34,7 @@ class RouteServiceProvider extends ServiceProvider
     private function registerAssets()
     {
         $this->publishes([
-            __DIR__ . '/config/optimus.components.php' => config_path('optimus.components.php'),
+            __DIR__ . '/config/iphuongtt.components.php' => config_path('iphuongtt.components.php'),
         ]);
     }
 
@@ -46,8 +46,8 @@ class RouteServiceProvider extends ServiceProvider
         /** @var \Illuminate\Config\Repository $config */
         $config = $this->app['config'];
 
-        if ($config->get('optimus.components') === null) {
-            $config->set('optimus.components', require __DIR__ . '/config/optimus.components.php');
+        if ($config->get('iphuongtt.components') === null) {
+            $config->set('iphuongtt.components', require __DIR__ . '/config/iphuongtt.components.php');
         }
     }
 
@@ -59,7 +59,7 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function map(Router $router)
     {
-        $config = $this->app['config']['optimus.components'];
+        $config = $this->app['config']['iphuongtt.components'];
 
         $middleware = $config['protection_middleware'];
 

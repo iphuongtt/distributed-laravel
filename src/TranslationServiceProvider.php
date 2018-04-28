@@ -1,10 +1,10 @@
 <?php
 
-namespace Optimus\Api\System;
+namespace Iphuongtt\Api\System;
 
 use Illuminate\Translation\TranslationServiceProvider as BaseTranslationServiceProvider;
-use Optimus\Api\System\Translation\DistributedFileLoader;
-use Optimus\Api\System\Utilties;
+use Iphuongtt\Api\System\Translation\DistributedFileLoader;
+use Iphuongtt\Api\System\Utilties;
 
 class TranslationServiceProvider extends BaseTranslationServiceProvider
 {
@@ -15,7 +15,7 @@ class TranslationServiceProvider extends BaseTranslationServiceProvider
      */
     protected function registerLoader()
     {
-        $config = $this->app['config']['optimus.components'];
+        $config = $this->app['config']['iphuongtt.components'];
 
         $paths = Utilities::findNamespaceResources(
             $config['namespaces'],
